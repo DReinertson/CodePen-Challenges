@@ -1,0 +1,93 @@
+<html>
+<head>
+<style>
+body{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.envelope{
+  background-color: green;
+  width: 20vw;
+  height: 10vw;
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+  background-color: black;
+}
+
+@keyframes open{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(180deg);}
+  from{bottom: initial;}
+  to{bottom: 10vw;}
+}
+
+@keyframes change{
+  from{bottom: 20vw;}
+  to{bottom: 40vw;}
+}
+.letter{
+  width: 20vw;
+  height: 10vw;
+  position: absolute;
+  z-index: 1;
+  background-color: yellow;
+}
+
+.top{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10vw solid transparent;
+  border-right: 10vw solid transparent;
+  border-top: 5vw solid black;
+  z-index: 4;
+  animation-duration: 3s;
+}
+.left{
+  width: 0;
+  height: 0;
+  border-top: 5vw solid transparent;
+  border-bottom: 5vw solid transparent;
+  border-left: 10vw solid gray;
+  z-index: 3;
+  position: absolute;
+}
+.right{
+  width: 0;
+  height: 0;
+  border-top: 5vw solid transparent;
+  border-bottom: 5vw solid transparent;
+  border-right: 10vw solid gray;
+  z-index: 3;
+  position: absolute;
+  left: 10vw;
+}
+.bottom{
+  width: 0;
+  height: 0;
+  border-left: 10vw solid transparent;
+  border-right: 10vw solid transparent;
+  border-bottom: 5vw solid black;
+  position: absolute;
+  z-index: 4;
+  top: 5vw;
+  }
+
+
+</style>
+</head>
+<body>
+<div class = "envelope" id = "envelope">
+  <div class = 'letter' id = "letter"></div>
+  <div class = "top" id = 'top'></div>
+  <div class = "bottom" id = "bottom"></div>
+  <div class = "left" id = "left"></div>
+  <div class = "right" id = "right"></div>
+</div>
+</body>
+</html>
