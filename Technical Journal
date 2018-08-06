@@ -1,0 +1,3 @@
+8/5/18 : Envelope Icon
+  - Currently making envelope icon, trying to decide between pure CSS or if I should incorporate JS. It seems like JS would be easier, using .click() and .addClass() and having a class with new properties. However, I don't know how to go about doing that if i want an actual animation as opposed to suddenly having envelope open. 
+  - Will look into JS animations, could probably have JS add properties to CSS that would cause the animation as well.
